@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 app.use(bodyParser.json());
 
-var v1 = require("./api/routes");
+var v1 = require("./routes/Index");
 
 app.use("/api/v1", v1.router);
 
@@ -26,5 +26,5 @@ app.use(function(req, res) {
 });
 
 app.listen(port, () => {
-    console.log("pharmacist API started on port " + port);
+    console.log("Pharmacist API started on port " + port);
 })

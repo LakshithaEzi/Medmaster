@@ -1,7 +1,7 @@
 const {User} = require("../Models/UserModel");
 
 const Auth = (req, res, next) => {
-    let token = req.header("Access-token") || req.header('Authorization');
+    let token = req.header("Access-token") || req.header('Authorizatio');
     if(token) {
         if(token.startsWith("Bearer")) {
 

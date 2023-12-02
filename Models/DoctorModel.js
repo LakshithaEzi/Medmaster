@@ -5,7 +5,7 @@ var DoctorSchema = new Schema({
     user_id: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
-        required: [true, "User field is required."]
+        required: [true, "User field is required. impot"]
     },
     DoctorLicenseNumber: {
         type: String,

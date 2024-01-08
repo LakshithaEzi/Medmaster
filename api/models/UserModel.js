@@ -3,8 +3,6 @@ var bcrypt = require("bcrypt");
 require("dotenv").config();
 const jwt = require("jsonwebtoken");
 
-var schema = mongoose.schema;
-
 var SALT = 10;
 
 var UserSchema = new mongoose.Schema({
@@ -19,9 +17,8 @@ var UserSchema = new mongoose.Schema({
     unique: [true, "Email is already exists on our website"],
   },
   username: {
-    tyep: String,
     required: [true, "Username is required"],
-    unique: [true, "please choose another username"],
+    type: String,
   },
   dob: {
     type: Date,

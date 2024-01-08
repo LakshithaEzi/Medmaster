@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(bodyParser.json());
 
-var v1 = require("./routes/Index");
+var v1 = require("./api/routes");
 
 app.use("/api/v1", v1.router);
 

@@ -1,7 +1,6 @@
 var mongoose = require("mongoose");
-var Schema = mongoose.Schema;
 
-var MedicineTagSchema = new Schema({
+var MedicineTagSchema = new mongoose.Schema({
 
     tag: {
         type:String,
@@ -18,5 +17,5 @@ var MedicineTagSchema = new Schema({
     },
 });
 
-const MedicineTag = mongoose.model("ServiceTag", ServiceTagSchema);
+const MedicineTag = mongoose.model("MedicineTag", MedicineTagSchema);
 module.exports={MedicineTag}

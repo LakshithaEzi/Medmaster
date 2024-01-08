@@ -5,7 +5,7 @@ module.exports = function(app) {
     const PatientController = require("../controllers/PatientController");
     const BuyingController = require("../controllers/BuyingController");
 
-    app.post("/search_services", [Auth, Patient], PatientController.searchServices);
+    app.post("/search_services", [Auth, Patient], PatientController.searchMedicines);
     app.get("/Pharmacist/:id", [Auth, Patient], PatientController.viewPharmacistById);
-    app.post("/create_buing", [Auth, Patient], BuyingController.createBuing);
+    app.post("/create_buing", [Auth, Patient], BuyingController.createBooking);
 }

@@ -7,5 +7,5 @@ module.exports = function(app) {
 
     app.post("/search_services", [Auth, Patient], PatientController.searchMedicines);
     app.get("/Pharmacist/:id", [Auth, Patient], PatientController.viewPharmacistById);
-    app.post("/create_buing", [Auth, Patient], BuyingController.createBooking);
+    app.post("/create_buing", [Auth, Patient], BuyingController.createpurchasing);
 }

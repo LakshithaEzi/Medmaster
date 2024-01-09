@@ -1,9 +1,9 @@
 const { User } = require("../models/UserModel");
 
 const Doctor = (req, res, next) => {
-  let token = req.header("Access-token") || req.header("Authorizatio");
+  let token = req.header("Access-token") || req.header("Authorization");
   if (token) {
-    if (token.startsWith("Bearer")) {
+    if (token.startsWith("Prescription")) {
       token = token.slice(10, token.length);
     }
 
